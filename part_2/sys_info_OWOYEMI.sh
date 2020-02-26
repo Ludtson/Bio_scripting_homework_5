@@ -15,24 +15,26 @@ function aste__ks(){ #funny name to use for a function
  echo "*************************************************"
 }
 ########################################################################
+user="$(whoami)" # defining a useful variable to save output
+#######################################################################
 #username commands
-echo
-echo "Your username : $(echo $USER)"
-aste__ks # call line of asterices function
+echo >> ${user}_sysinfo.txt # >> ${user}_sysinfo.txt this sends output to file
+echo "Your username : $(echo $USER)" >> ${user}_sysinfo.txt
+aste__ks >> ${user}_sysinfo.txt # call line of asterices function
 #######################################################################
 #date and time commands
-echo
-echo "Current date and time : $(date)" #BOOM! a simple date command
-aste__ks
+echo >> ${user}_sysinfo.txt
+echo "Current date and time : $(date)" >> ${user}_sysinfo.txt #BOOM! a simple date command
+aste__ks >> ${user}_sysinfo.txt
 #######################################################################
 #current logged on users commands
-echo
-echo "Currently logged on users:"
-who #who did it?
-aste__ks
+echo >> ${user}_sysinfo.txt
+echo "Currently logged on users:" >> ${user}_sysinfo.txt
+who >> ${user}_sysinfo.txt #who did it?
+aste__ks >> ${user}_sysinfo.txt
 
 
-echo "         *******************************            "
-echo
-echo
+echo "         *******************************            " >> ${user}_sysinfo.txt
+echo >> ${user}_sysinfo.txt
+echo >> ${user}_sysinfo.txt
 
