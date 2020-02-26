@@ -15,6 +15,7 @@ function aste__ks(){
  echo "*************************************************"
 }
 ########################################################################
+echo
 echo "Your username : $(echo $USER)"
-aste__ks # call function
+aste__ks # call line of asterices function
 
